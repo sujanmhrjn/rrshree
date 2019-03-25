@@ -1,0 +1,344 @@
+*{
+    box-sizing: border-box;
+}
+/* Custom fonts */
+@font-face{
+    font-family: 'RailwayBold';
+    src:url(../fonts/Raleway-Bold.ttf);
+}
+@font-face{
+    font-family: 'RailwayRegular';
+    src:url(../fonts/Raleway-Regular.ttf);
+}
+/* main color: #e7434e */
+html,body{
+    margin:0 auto;
+    font:16px "RailwayRegular";
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+header,nav,section,footer,aside,figure,figcaption{
+    display: block;
+}
+
+/* buttons */
+.btn{
+    padding:7px 35px;
+    display: inline-block;
+    font:14px 'RailwayBold';
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    border:none;
+}
+.btn-default{
+    background-color: #e7434e;
+    color:#fff;
+    
+}
+.btn-ghost{
+    border:1px solid #FFF;
+    background-color:transparent;
+    color:#fff;
+    
+}
+.btn-ghost:hover{
+    background-color:#fff;
+    color:#000;
+}
+
+
+/*
+    ====== Section ====== 
+*/
+.section{
+    padding:100px 0;
+}
+.section-header {
+    text-align: center;
+    margin-bottom:80px;
+}
+.section-header h2{
+    margin:0;
+    text-transform: uppercase;
+    color:#343435;
+    font-size:30px;
+    letter-spacing: 1px;
+}
+
+.section-header p{
+    font:16px 'Open Sans';
+    color:#717171;
+    margin-bottom: 0;
+}
+
+/*
+    ====== Card ====== 
+*/
+
+.card{
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom:30px;
+}
+.card a{
+    display: block;
+    position: relative;
+}
+.card figure {
+    margin:0;
+}
+.card figure figcaption{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:30px;
+}
+
+.card figure img{
+    width:100%;
+}
+.card a .no-of-boats{
+    display: block;
+    position: absolute;
+    top:35px;
+    left:35px;
+    background-color:#e7434e;
+    color:#fff;
+    font:600 16px 'Open Sans';
+    padding:8px 15px;
+    border-radius: 5px;
+}
+
+.card a::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+.card .city{
+    font-size:30px;
+    color:#fff;
+    margin-bottom:10px;
+}
+.card .country{
+    color:#fff;
+    font-size:20px;
+}
+
+.card .no-of-boats img{
+    margin-right:10px;
+}
+
+/* ==== row === */
+.row{
+    margin:0 -15px;
+}
+.row div[class^="col-"]{
+    padding:0 15px;
+    float:left;
+}
+.row .col-8{
+    max-width:66.667%;
+}
+.row .col-4{
+    max-width: 33.333%;
+}
+
+.row::after{
+    clear:both;
+    display: block;
+    content: '';
+    width:100%;
+}
+/* ====== header ==== */
+.header{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    padding:15px 0;
+}
+
+.header-wrapper .logo{
+    float: left;
+}
+.header-wrapper .navbar{
+    float: right;
+}
+.header-wrapper .navbar ul{
+    margin-top:2px;
+}
+.header-wrapper .navbar ul,
+.header-wrapper .navbar ul li{
+    float: left;
+}
+.header-wrapper .navbar ul::after{
+    clear:both;
+    content:"";
+    width:100%;
+    display: block;
+}
+.header-wrapper .navbar a{
+    color:#fff;
+    display: block;
+    padding:5px 25px;
+    font:16px 'RailwayBold';
+    text-transform: uppercase;
+}
+.header-wrapper .navbar a:hover{
+    color:#e7434e;
+}
+.header-wrapper .btn{
+    float: right;
+    margin-left:25px;
+    
+}
+
+.header-wrapper::after{
+    clear:both;
+    content:"";
+    width:100%;
+    display: block;
+}
+/*
+    ====== Banner ====== 
+*/
+.banner{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.banner::before{
+    content:"";
+    display: block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: #000;
+    opacity: 0.4;
+}
+.banner img.main{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-content{
+    position: absolute;
+    z-index:99;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    color:#fff;
+    max-width: 960px;
+    width:100%;
+    margin:0 auto;
+    padding:20% 0;
+    text-align: center;
+}
+
+.banner-content .hero-text{
+    margin:0;
+    font:72px 'RailwayBold';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.banner-content .hero-text-sub{
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin:0 0 45px;
+}
+.banner-content form{
+    width:770px;
+    margin:0 auto;
+}
+.banner-content form .input-group input{
+    float: left;
+    width:570px;
+    height:70px;
+    padding:5px 15px;
+    border:none;
+    font-size:16px;
+    border-radius:4px 0 0 4px;
+    text-transform: uppercase;
+}
+.banner-content form .input-group input:focus{
+    outline:none;
+}
+.banner-content form .input-group .btn{
+    float: right;
+    height:70px;
+    width:200px;
+    border-radius:0 4px 4px 0;
+}
+/*
+    ====== Features ====== 
+*/
+.features {
+    position:relative;
+    top:-80px;
+    margin-bottom:-80px;
+}
+.features .container{
+    background-color: #fff;
+    padding:30px  15px;
+    box-shadow:0 9px 15px -2px #dedede;
+    border-radius: 10px;
+}
+.features .container::after{
+    clear: both;
+    display: block;
+    width:100%;
+    content:"";
+}
+.features .feature-item {
+    text-align: center;
+    border-right:1px solid #dedede;
+    float: left;
+    max-width:25%;
+    width:100%;
+}
+.features .feature-item:last-child{
+    border:none;
+}
+.features .feature-item .number{
+    font:700 30px 'Open Sans';
+    color:#333;
+    letter-spacing: 1px;
+    margin-bottom:8px;
+}
+.features .feature-item .text{
+    color:#717171;
+    font:18px 'Open Sans';
+}
