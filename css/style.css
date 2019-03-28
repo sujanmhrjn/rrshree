@@ -37,6 +37,9 @@ img{
 header,nav,section,footer,aside,figure,figcaption{
     display: block;
 }
+.text-center{
+    text-align: center;
+}
 
 /* buttons */
 .btn{
@@ -53,6 +56,14 @@ header,nav,section,footer,aside,figure,figcaption{
     color:#fff;
     
 }
+.btn-default:hover{
+    background-color: #a7000b;
+    color:#fff;
+    
+}
+.btn-lg{
+     padding:15px 45px;
+}
 .btn-ghost{
     border:1px solid #FFF;
     background-color:transparent;
@@ -64,12 +75,24 @@ header,nav,section,footer,aside,figure,figcaption{
     color:#000;
 }
 
+.btn-gray{
+    border-color:#dedede;
+    color:#333;
+   
+}
+
+.btn-gray:hover{
+    background-color: #333;
+    color:#fff;
+}
+
+
 
 /*
     ====== Section ====== 
 */
 .section{
-    padding:100px 0;
+    padding:100px 0 80px;
 }
 .section-header {
     text-align: center;
@@ -92,10 +115,14 @@ header,nav,section,footer,aside,figure,figcaption{
 /*
     ====== Card ====== 
 */
+.card-wrapper{
+    margin-bottom:70px;
+}
+
 
 .card{
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom:30px;
 }
 .card a{
@@ -115,11 +142,12 @@ header,nav,section,footer,aside,figure,figcaption{
 
 .card figure img{
     width:100%;
+    display: block;
 }
 .card a .no-of-boats{
     display: block;
     position: absolute;
-    top:35px;
+    top:25px;
     left:35px;
     background-color:#e7434e;
     color:#fff;
@@ -149,7 +177,17 @@ header,nav,section,footer,aside,figure,figcaption{
     color:#fff;
     font-size:20px;
 }
-
+.card .country img{
+    width:auto;
+    max-width: 15px;
+    max-height: 12px;
+    display: inline-block;
+}
+.card .country span{
+    font:14px 'Open Sans';
+    margin-right: 15px;
+    display: inline-block;
+}
 .card .no-of-boats img{
     margin-right:10px;
 }
@@ -161,12 +199,22 @@ header,nav,section,footer,aside,figure,figcaption{
 .row div[class^="col-"]{
     padding:0 15px;
     float:left;
+    width:100%;
 }
 .row .col-8{
     max-width:66.667%;
 }
+.row .col-6{
+    max-width: 50%;
+}
+.row .col-5{
+    max-width:41.667%;
+}
 .row .col-4{
     max-width: 33.333%;
+}
+.row .col-2{
+    max-width: 16.667%;
 }
 
 .row::after{
@@ -341,4 +389,130 @@ header,nav,section,footer,aside,figure,figcaption{
 .features .feature-item .text{
     color:#717171;
     font:18px 'Open Sans';
+}
+
+
+
+/* === Section Big Banner === */
+.section-big-banner{
+    position: relative;
+    background:#333 url(../images/big-banner.png) no-repeat center center/ cover;
+    background-attachment: fixed;
+}
+.section-big-banner::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.section-big-banner .banner-content{
+    position: relative;
+    padding:150px 0;
+}
+
+.section-big-banner .hero-text{
+    font-size:60px;
+}
+.section-big-banner .hero-text-sub{
+    font-size:25px;
+}
+
+
+/* ==== footer ==== */
+.footer{
+
+    background:#404040 url(../images/pattern.png) repeat-x;
+    background-size: 10px;
+    min-height: 100px;
+    padding:50px 0 0;
+    color:#fff;
+
+}
+.footer h4{
+    font:600 14px 'Open Sans';
+    text-transform: uppercase;
+}
+.footer li a{
+   color:#fff;
+   font-size:14px;
+   color:#fff;
+   display: block;
+   padding:10px 0;
+}
+.footer li a:hover{
+    color:#e7434e;
+}
+
+
+.footer form{
+   width:100%;
+    margin:0 auto 30px;
+}
+.footer form .input-group input{
+    float: left;
+    width:270px;
+    height:40px;
+    padding:5px 15px;
+    border:none;
+    font-size:14px;
+    border-radius:4px 0 0 4px;
+  
+}
+.footer form .input-group input:focus{
+    outline:none;
+}
+.footer form .input-group .btn{
+    float: left;
+    height:40px;
+    width:145px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.footer form::after{
+    content:"";
+    display: block;
+    width:100%;
+    clear: both;
+}
+
+.footer .social a{
+    height:30px;
+    width:30px;
+    background: #717171;
+    color:#fff;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.footer .social a:hover{
+    background-color:#e7434e;
+}
+.p-2{
+    padding-left:40px !important;
+}
+
+.copyright{
+    background-color:#333;
+    font:12px 'Open Sans';
+    margin-top: 50px;
+}
+.copyright .copyright-left{
+    float: left;
+}
+.copyright .copyright-right{
+    float: right;
+}
+.copyright::after{
+     content:"";
+    display: block;
+    width:100%;
+    clear: both;
 }
